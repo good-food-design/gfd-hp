@@ -1,0 +1,34 @@
+query ShopList {
+  shops(where: { orderby: { field: MENU_ORDER, order: ASC } }) {
+    nodes {
+      shop {
+        address
+        businessHours
+        deliveryFoodpanda {
+          title
+          url
+        }
+        deliveryMenu {
+          title
+          url
+        }
+        deliveryUberEats {
+          title
+          url
+        }
+        deliveryWolt {
+          title
+          url
+        }
+        holiday
+        map
+        name
+        phoneNumber
+        takeOut
+        mapLink {
+          url
+        }
+      }
+    }
+  }
+}

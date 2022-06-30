@@ -1,0 +1,25 @@
+query NewQuery {
+  gfdBrands {
+    nodes {
+      content
+      title
+      custom_fields {
+        mainImage {
+          mediaItemUrl
+        }
+        subImages1 {
+          mediaItemUrl
+        }
+        subImages2 {
+          mediaItemUrl
+        }
+        subImages3 {
+          mediaItemUrl
+        }
+        subImages4 {
+          mediaItemUrl
+        }
+      }
+    }
+  }
+}

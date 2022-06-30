@@ -1,0 +1,41 @@
+query GfdNewsList($size: Int, $offset: Int, $categoryName: String) {
+  gfdNewss(
+    where: {
+      status: PUBLISH
+      orderby: { field: DATE, order: DESC }
+      offsetPagination: { offset: $offset, size: $size }
+      categoryName: $categoryName
+    }
+  ) {
+    nodes {
+      title
+      date
+      id
+      content
+      gfd_news_custom_filed {
+        mainImage {
+          mediaItemUrl
+        }
+      }
+      categories {
+        nodes {
+          name
+        }
+      }
+    }
+    pageInfo {
+      offsetPagination {
+        hasMore
+        hasPrevious
+        total
+      }
+    }
+  }
+  categories(first: 10) {
+    edges {
+      node {
+        name
+      }
+    }
+  }
+}

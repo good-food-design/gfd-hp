@@ -1,0 +1,13 @@
+query NewsDetail($id: ID!) {
+  gfdNewsBy(id: $id) {
+    id
+    title
+    content
+    date
+    categories {
+      nodes {
+        name
+      }
+    }
+  }
+}

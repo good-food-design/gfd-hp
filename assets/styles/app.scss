@@ -1,0 +1,76 @@
+html {
+  font-size: 62.5%;
+  word-spacing: 1px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "notosans-jp-black";
+  font-size: 1.6rem;/* 16px*/
+  line-height: 1.8;
+}  
+
+h1,h2,h3,h4 {
+  font-weight: bold;
+  color: #2d2c2ce3;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg.-visible:before {
+  transform: translate(100%);
+}
+
+.bg:before {
+  z-index: 30;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(#FE4731, #FFB62C); 
+  background: -webkit-linear-gradient(#FE4731, #FFB62C); 
+  background: linear-gradient(#FE4731, #FFB62C); 
+  transform: translate(0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
+  border-radius: 1rem;
+  content: '';
+}
+
+.bg-rounded {
+  border-radius: 1rem;
+}
+
+.fadein-before{
+  /*透過度の設定。0で表示されなくなる。*/
+  opacity: 0;
+  /*要素を左に100pxずらしたところに配置する*/
+  transform:translateY(-20px);
+  /*透過度と表示位置を1秒かけて変化させる*/
+  transition:opacity 1s,transform 1s;
+}
+
+.fadein-after{
+  /*透過度の設定。非表示から表示にする。*/
+  opacity: 1;
+  /*要素を100px左にしていたのを元の位置に戻す*/
+  transform: translate(0);
+}
+@media (max-width: 768px) {
+
+}

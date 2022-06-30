@@ -1,0 +1,6 @@
+query MetaDetail($id: ID!) {
+  meta(id: $id) {
+    title
+    content
+  }
+}

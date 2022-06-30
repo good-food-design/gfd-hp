@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "notosans-jp-mediam";
+  src: url(/fonts/NotoSansJP-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "notosans-jp-black";
+  src: url(/fonts/NotoSansJP-Black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "greycliffcf-medium";
+  src: url(/fonts/greycliffcf-medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "greycliffcf-heavy";
+  src: url(/fonts/greycliffcf-heavy.otf) format("opentype");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
