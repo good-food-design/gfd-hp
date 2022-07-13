@@ -48,13 +48,15 @@ export default {
   },
   methods: {
     load(id) {
-      const options = {
-        root: null,
-        rootMargin: "0px 0px -350px",
-        threshold: 0,
-      };
-      var target = document.getElementById("news-img-" + id);
-      this.onIntersect(target, options);
+      setTimeout(() => {
+        const options = {
+          root: null,
+          rootMargin: "0px 0px -350px",
+          threshold: 0,
+        };
+        var target = document.getElementById("news-img-" + id);
+        this.onIntersect(target, options);
+      }, 700);
     },
   },
 };
